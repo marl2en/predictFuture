@@ -8,5 +8,7 @@ demonstration of uni-variate time series prediction by predicting monthly births
 # prediction for 2023
 ![IMG_6013](https://github.com/marl2en/predictFuture/blob/main/sarimaxPrediction_with_expSmoothing_trend.png)
 
+# yearly change of births last 100 years
+![last100](https://github.com/marl2en/predictFuture/blob/main/birthsPerYear1923_2022proc.png)
 
 !!! For more information look at the pdf file !!!
