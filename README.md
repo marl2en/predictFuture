@@ -4,6 +4,9 @@ demonstration of uni-variate time series prediction by predicting monthly births
 # real data
 ![realdata](https://github.com/marl2en/predictFuture/blob/main/Live_births2019_2022.png)
 
+# change of trend
+![change](https://github.com/marl2en/predictFuture/blob/main/Change_of_trend.png)
+
 
 # prediction for 2023
 ![IMG_6013](https://github.com/marl2en/predictFuture/blob/main/sarimaxPrediction_with_expSmoothing_trend.png)
