@@ -18,8 +18,9 @@ demonstration of uni-variate time series prediction by predicting monthly births
 ![prophecy](https://github.com/marl2en/predictFuture/blob/main/Prophecy_2023_without_bugs.png)
 
 # fbprophet forecast 12 months
-Year-Month  lower  mean  upper   real
-2022-12     6748   7017   7305   not released
+|Year-Month|  lower | mean | upper |  real |
+|----------|--------|------|-------|-------|
+|2022-12   |  6748  | 7017 |  7305 |  not released |
 2023-01     7849   8159   8437
 2023-02     7281   7590   7889
 2023-03     8085   8414   8752
