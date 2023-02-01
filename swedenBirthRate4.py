@@ -139,6 +139,17 @@ m.fit(df)
 future = m.make_future_dataframe(periods = horizon) # , freq = 1
 forecast = m.predict(future)
 
+# make_future_dataframe don't get timedelta right
+dates = [dt.datetime.strptime(x, '%Y-%m-%d').date() for x in births_month['Date'].values]
+lastdate = dates[-1]
+for i in range(1,horizon+1,1):
+    dates.append(add_months(lastdate, i))
+
+datesstr = [x.isoformat() for x in dates]
+future['ds'] = datesstr
+
+
+
 fig1 = m.plot(forecast);plt.show()
 fig2 = m.plot_components(forecast);plt.show()
 
@@ -174,6 +185,10 @@ forecast.index = dates
 realbirths = births_month['Live births'].values.tolist()
 realbirths = realbirths + [realbirths[-1]] * horizon
 forecast['Live births'] = realbirths
+forecast['Date'] = datesstr
+
+forecast = forecast.astype({'yhat': int, 'yhat_lower': int,'yhat_upper': int})
+
 
 
 showDTplot(forecast,col2show=['Live births','yhat','trend'],offset=0,title='Live Births in Sweden - prediction for next 12 months',ylabel='Births per Month',confInt=[('yhat_lower','yhat_upper'),('trend_lower', 'trend_upper')],showBorder=True)
