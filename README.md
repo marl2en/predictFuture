@@ -93,6 +93,7 @@ migration had no effekt on births during this period (jan/2019 - nov/2022)
 - cpi = -0.01 means: higher inflation has (little) negative effekt on births
 - jabs = -0.05: more jabs -> less births. Model is quite confident about that. 
 
+![jabs](https://github.com/marl2en/predictFuture/blob/main/simulated_vaccination_status_pregnant.png)
 
 
 !!! For more information look at the pdf file !!!
