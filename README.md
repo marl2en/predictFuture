@@ -50,4 +50,49 @@ demonstration of uni-variate time series prediction by predicting monthly births
 |2023-11   |  6167  |  6662|   7157|  |
 
 
+# Poisson Regression
+
+To investigate causes of dropping birth count different regressors are used in a Poisson Regression Model
+Random samples are used for training and testing. (100 samples, see poisson2.py)
+Mean absolute percentage error (mape) is about 5%. 
+
+Parameters used for the model are:
+- year
+- month
+- population size
+- surplus of migration
+- CPI (Consumer Price Index)
+- Vaccination Status of pregnant women (simulation, see https://jamanetwork.com/journals/jama/fullarticle/2790608)
+
+expr = """births ~ year  + month + population + surplus + cpi + jabs"""
+
+|parameter|  mean | std |
+|----------|--------|------|
+|Intercept   |  15.93  | 7.81|
+|year   |  0.09 |  0.06|
+|month   |  0.0  | 0.01|
+|population   | -0.83 |  0.87|
+|surplus   |  0.0  |  0.0|
+|cpi   |  -0.01  |  0.0|
+|jabs   |  -0.05  |  0.02|
+
+
+|pvalues|  mean | std |
+|----------|--------|------|
+|Intercept   |  0.04  | 0.15|
+|year   |  0.07 |  0.17|
+|month   | 0.27 | 0.33|
+|population   | 0.15 |  0.25|
+|surplus   |  0.0  |  0.0|
+|cpi   |  0.01 |  0.06|
+|jabs   |  0.02  |  0.11|
+
+pvalues under 0.05 are migration surplus, cpi and vaccination status (jabs). 
+
+migration had no effekt on births during this period (jan/2019 - nov/2022)
+cpi = -0.01 means: higher inflation has (little) negative effekt on births
+jabs = -0.05: more jabs -> less births. Model is quite confident about that. 
+
+
+
 !!! For more information look at the pdf file !!!
