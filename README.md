@@ -52,8 +52,10 @@ demonstration of uni-variate time series prediction by predicting monthly births
 
 # Poisson Regression
 
-To investigate causes of dropping birth count different regressors are used in a Poisson Regression Model
-Random samples are used for training and testing. (100 samples, see poisson2.py)
+To investigate causes of dropping birth count different regressors are used in a Poisson Regression Model.
+
+100 random selecteded samples were used for training and testing. (see poisson2.py)
+
 Mean absolute percentage error (mape) is about 5%. 
 
 Parameters used for the model are:
@@ -89,9 +91,9 @@ expr = """births ~ year  + month + population + surplus + cpi + jabs"""
 
 pvalues under 0.05 are migration surplus, cpi and vaccination status (jabs). 
 
-migration had no effekt on births during this period (jan/2019 - nov/2022)
-- cpi = -0.01 means: higher inflation has (little) negative effekt on births
-- jabs = -0.05: more jabs -> less births. Model is quite confident about that. 
+Migration had no impact on births during this period (jan/2019 - nov/2022)
+- cpi = -0.01 (pvalue:0.01) means: higher inflation has (little) negative effekt on births
+- jabs = -0.05 (pvalue:0.02): more jabs -> less births. Model is quite confident about that. 
 
 ![jabs](https://github.com/marl2en/predictFuture/blob/main/simulated_vaccination_status_pregnant.png)
 
