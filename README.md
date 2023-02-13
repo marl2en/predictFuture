@@ -90,8 +90,8 @@ expr = """births ~ year  + month + population + surplus + cpi + jabs"""
 pvalues under 0.05 are migration surplus, cpi and vaccination status (jabs). 
 
 migration had no effekt on births during this period (jan/2019 - nov/2022)
-cpi = -0.01 means: higher inflation has (little) negative effekt on births
-jabs = -0.05: more jabs -> less births. Model is quite confident about that. 
+- cpi = -0.01 means: higher inflation has (little) negative effekt on births
+- jabs = -0.05: more jabs -> less births. Model is quite confident about that. 
 
 
 
