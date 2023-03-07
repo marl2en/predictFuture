@@ -20,7 +20,7 @@ demonstration of uni-variate time series prediction by predicting monthly births
 # fbprophet forecast 12 months
 |Year-Month|  lower | mean | upper |  real |
 |----------|--------|------|-------|-------|
-|2022-12   |  6748  | 7017 |  7305 |  5225 |
+|2022-12   |  6748  | 7017 |  7305 |  7522 |
 |2023-01   |  7849  | 8159 |  8437 |  not released |
 |2023-02   |  7281  | 7590 |  7889 |  |
 |2023-03   |  8085  | 8414 |  8752 |  |
@@ -36,7 +36,7 @@ demonstration of uni-variate time series prediction by predicting monthly births
 # sarimax forecast 12 months
 |Year-Month|  lower | mean | upper |  real |
 |----------|--------|------|-------|-------|
-|2022-12   |  6836  |  7277|   7719|   5225 |
+|2022-12   |  6836  |  7277|   7719|   7522 |
 |2023-01   |  7469  |  7963|   8456|   not released|
 |2023-02   |  7113  |  7607|   8102|  |
 |2023-03   |  7728  |  8223|   8718|  |
