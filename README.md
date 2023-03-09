@@ -98,4 +98,51 @@ Migration had no impact on births during this period (jan/2019 - nov/2022)
 ![jabs](https://github.com/marl2en/predictFuture/blob/main/simulated_vaccination_status_pregnant.png)
 
 
+
+# Rolling Regression
+Instead of a linear reggression with statsmodel we choose PYMC to analyse possible causes for a dropping birth rate.
+"PyMC is a Python package for Bayesian statistical modeling and probabilistic machine learning." (Wikipedia)
+
+Instead of the number of births per month we use: y = (number of births per month)/(number of women in fertile age).
+Women in fertile age: 15-49 is about 2.2 millions and rising. (data3.csv: Women)
+Because the numbers of births is now diveded by the number of women in fertile age, we don't use population size or migration surplus as a variable. 
+The mean age of the population didn't changed that much in four years (2019-2022). 
+
+Variables used:
+
+--- known Unknowns (factors suspected to have an influence, but uncertain how much) ---
+- CPI (Consumer Price Index) - economic hardship for young families (beta_cpi)
+- Vaccination status (beta_jabs)
+
+--- unknown Unknowns ---
+- beta_unknown
+
+These variables are changing with time. Modeled as Gaussian Randomwalks.
+![model](https://github.com/marl2en/predictFuture/blob/main/model2.png)
+
+![fittedmodel](https://github.com/marl2en/predictFuture/blob/main/fittedModel.png)
+The model fits well. Trend and seasonality look fine. 
+
+![tracePlot](https://github.com/marl2en/predictFuture/blob/main/trace_plot.png)
+Plot of model parameters trace. 
+
+For more information, see rhat and summary3.csv.
+
+![tracePlot](https://github.com/marl2en/predictFuture/blob/main/beta_cpi.png)
+
+
+Inflation (CPI) had a little negative effect on births since 2021. 
+
+![beta_jabs](https://github.com/marl2en/predictFuture/blob/main/beta_jabs.png)
+
+Estimated effect of mRNA vaccins on births. 
+
+![beta_jabs](https://github.com/marl2en/predictFuture/blob/main/beta_unknown.png)
+Effect of unknowns. 
+
+
+
+
+
+
 !!! For more information look at the pdf file !!!
