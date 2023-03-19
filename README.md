@@ -141,6 +141,14 @@ Estimated effect of mRNA vaccins on births.
 Effect of unknowns. 
 
 
+# State Space Model (SSM)
+Monthly births 2019-2022. Predict births for 2023 with:
+- SSM with UnobservedComponents of statsmodel library. 
+- structural timeseries (trend,seasonality,autoregressive) with pymc3 (bayesianStateSpaceModel.py)
+
+![tracePlot](https://github.com/marl2en/predictFuture/blob/main/ssm_bayesian_forecast2023viridisCI.png)
+
+
 
 
 
