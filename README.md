@@ -1,7 +1,19 @@
 # predictFuture
 demonstration of uni-variate time series prediction by predicting monthly births in Sweden for the next 12 months 
 
-# real data
+# Followup on prediction for 2023 with real data
+![followup](https://github.com/marl2en/predictFuture/blob/main/followup2023realVSpredicted.png)
+The prediction was too pessimistic, but the trend remains unchanged (see forecast for 2024 and trend)
+
+# Forecast of total numbers of births per month for 2024 (Sweden)
+![pred2024](https://github.com/marl2en/predictFuture/blob/main/fitted_predicted2016-2024.png)
+
+# Historic Trend 2000 - 2023 (2024: predicted trend)
+![trend2000_2024](https://github.com/marl2en/predictFuture/blob/main/trend_season.png)
+Birth rates decline since 2018-2019, but at a faster rate since 2021. 
+
+
+# real data 2019-2022
 ![realdata](https://github.com/marl2en/predictFuture/blob/main/Live_births2019_2022.png)
 
 # change of trend
